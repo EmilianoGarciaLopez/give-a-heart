@@ -9,25 +9,10 @@
     <meta name="description" content="The Give a Heart campaign by Beautiful Together Sanctuarty gives aspiring artists the chance to use their talents to help animals in need">
     <meta name="keywords" content="Give a Heart, Animal Sanctuarty, Helping dogs, charity, non-profit, art, fundraiser">
     <link rel="stylesheet" href="./style.scss" />
-
     <script>
       // removes preload class from body after page load
       window.onload = function() {
         document.body.classList.remove('preload');
-      }
-
-      // makes svg icons work consistently across browsers
-      function icon(name) {
-        return new Promise(function(resolve, reject) {
-          var xmlhttp = new XMLHttpRequest();
-          xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-              resolve(this.responseText);
-            }
-          };
-          xmlhttp.open("GET", "images/icons/" + name + ".svg", true);
-          xmlhttp.send();
-        });
       }
     </script>
   </head>
