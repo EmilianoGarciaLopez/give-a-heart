@@ -74,6 +74,8 @@ section {
       background-color: $grey;
       color: $green;
       border: $green 2px solid;
+      transition-property: color, background-color;
+      transition: 0.3s ease-in-out;
     }
   }
 
@@ -88,12 +90,14 @@ section {
     cursor: pointer;
     border: $green 2px solid;
     text-decoration: none;
-    transition-property: color, background-color;
+
     transition: 0.3s ease-in-out;
 
     &:hover {
       background-color: $green;
       color: white;
+      transition-property: color, background-color;
+      transition: 0.3s ease-in-out;
     }
   }
 }
