@@ -68,7 +68,6 @@ section {
     cursor: pointer;
     border: $green 2px solid;
     text-decoration: none;
-    transition-property: color, background-color;
     transition: 0.3s ease-in-out;
 
     &:hover {
@@ -91,7 +90,6 @@ section {
     cursor: pointer;
     border: $green 2px solid;
     text-decoration: none;
-
     transition: 0.3s ease-in-out;
 
     &:hover {
