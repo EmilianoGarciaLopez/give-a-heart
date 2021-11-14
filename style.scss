@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@700&display=swap");
 
 $green: #40a824;
+$darkgreen: #1d8a1d;
 $pink: #e555a8;
 $black: #333333;
 $grey: #f5f4f2;
@@ -137,6 +138,18 @@ section {
       display: block;
       margin-top: 0.25em;
       line-height: 1.4;
+
+      a {
+        color: $green;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          color: $darkgreen;
+          transition-property: color;
+          transition: 0.3s ease-in-out;
+        }
+      }
     }
   }
   img {
@@ -224,6 +237,10 @@ footer {
       color: darkgrey;
       font-size: 0.8em;
       line-height: 1.75;
+
+      a {
+        color: darkgrey;
+      }
     }
   }
 }
