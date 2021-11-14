@@ -52,11 +52,11 @@ section {
 }
 
 .buttons {
-  display: inline-block;
-  margin-top: 1.5em;
-  line-height: 1em;
+  display: flex;
+  flex-wrap: wrap;
 
   .button-filled {
+    margin-top: 1em;
     background-color: $green;
     color: white;
     padding: 0.5em 1em;
@@ -78,6 +78,7 @@ section {
   }
 
   .button {
+    margin-top: 1em;
     background-color: $grey;
     color: $green;
     padding: 0.5em 0.75em;
@@ -221,4 +222,111 @@ footer {
       line-height: 1.75;
     }
   }
+}
+
+// media queries
+
+@media screen and (max-width: 900px) {
+
+  .hero {
+    .hero-text {
+      h1 {
+        font-size: 3em;
+      }
+      .subtitle {
+        font-size: 1em;
+      }
+    }  
+
+    img {
+      width: 40%;
+    }
+  }
+
+  .getInvolved {
+    .getInvolved-text {
+      h2 {
+        font-size: 2em;
+      }
+    }
+    img {
+      width: 35%;
+    }
+  }
+
+  .whatYouCanDo {
+    .smaller-container {
+      grid-template-columns: 1fr 1fr;
+    
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .buttons {
+    font-size: 0.85rem;
+    .button-filled {
+      padding: 0.5em 0.75em;
+    }
+    .button {
+      padding: 0.5em 0.75em;
+    }
+  }
+
+  .container {
+    width: 90%;
+  }
+  .smaller-container {
+    width: 90%;
+  }
+}
+  
+@media screen and (max-width: 500px) {
+
+  .navbar {
+    .container {
+      flex-direction: row;
+
+      img {
+        height: 3em;
+      }
+    }
+  }
+
+  .container, .smaller-container {
+    flex-direction: column-reverse;
+  }
+
+  .hero {
+    .hero-text {
+      margin: 0;
+      width: 90%;
+    }
+    img {
+      width: 90%;
+    }
+  }
+
+
+  .getInvolved {
+    .getInvolved-text {
+      margin: 0;
+      width: 90%;
+    }
+    img {
+      width: 70%;
+      margin-bottom: 1em;
+    }
+  }
+
+  .whatYouCanDo {
+    .smaller-container {
+      grid-template-columns: 1fr;
+      img {
+        width: 50%;
+      }
+    }
+  }
+  
 }
