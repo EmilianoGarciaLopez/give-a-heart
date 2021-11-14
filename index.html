@@ -9,8 +9,15 @@
     <meta name="description" content="The Give a Heart campaign by Beautiful Together Sanctuarty gives aspiring artists the chance to use their talents to help animals in need">
     <meta name="keywords" content="Give a Heart, Animal Sanctuarty, Helping dogs, charity, non-profit, art, fundraiser">
     <link rel="stylesheet" href="./style.scss" />
+
+    <script>
+      // removes preload class from body after page load
+      window.onload = function() {
+        document.body.classList.remove('preload');
+      }
+    </script>
   </head>
-  <body>
+  <body class="preload">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-logo">

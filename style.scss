@@ -8,6 +8,10 @@ $grey: #f5f4f2;
 $orange: #EAA236;
 $darkgrey: #e4e1e1;
 
+.preload * {
+  transition: none !important;
+}
+
 * {
   margin: 0;
   padding: 0;
