@@ -203,7 +203,7 @@ section {
       padding: 2em;
       border-radius: 0.5em;
       box-shadow: 6px 6px 8px $darkgrey;
-      outline: $orange 1px solid;
+      border: $orange 1px solid;
 
       &:last-child {
         cursor: default;
