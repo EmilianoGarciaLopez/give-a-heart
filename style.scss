@@ -204,10 +204,6 @@ section {
       border-radius: 0.5em;
       box-shadow: 6px 6px 8px $darkgrey;
       border: $orange 1px solid;
-
-      &:last-child {
-        cursor: default;
-      }
     }
   }
 
