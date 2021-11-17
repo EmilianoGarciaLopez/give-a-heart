@@ -5,7 +5,7 @@ $darkgreen: #1d8a1d;
 $pink: #e555a8;
 $black: #333333;
 $grey: #f5f4f2;
-$orange: #EAA236;
+$orange: #eaa236;
 $darkgrey: #e4e1e1;
 $darkergrey: #b3aeae;
 
@@ -110,7 +110,6 @@ section {
   }
 }
 
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -120,7 +119,6 @@ section {
     height: 4.5em;
   }
 }
-
 
 .hero {
   .hero-text {
@@ -165,20 +163,19 @@ section {
   }
 }
 
+h2 {
+  font-size: 2.75em;
+  font-weight: 700;
+  color: $black;
+  display: block;
+}
+
 .getInvolved {
   margin: 10em 0;
   .getInvolved-text {
     width: 50%;
     max-width: 500px;
     margin: 2em 4em 2em 0;
-
-    h2 {
-      font-size: 2.75em;
-      font-weight: 700;
-      color: $black;
-      display: block;
-    }
-
   }
   img {
     width: 50%;
@@ -248,6 +245,27 @@ section {
   }
 }
 
+.heartGrid {
+  background-color: $grey;
+
+  .smaller-container {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+  }
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -277,16 +295,12 @@ footer {
   }
 }
 
-.gridContainer {
-  img {
-    width: 200px;
-    height: 100%;
-  }
-}
-
 // media queries
 
 @media screen and (max-width: 900px) {
+  h2 {
+    font-size: 2em;
+  }
 
   .hero {
     .hero-text {
@@ -296,7 +310,7 @@ footer {
       .subtitle {
         font-size: 1em;
       }
-    }  
+    }
 
     img {
       width: 40%;
@@ -304,11 +318,6 @@ footer {
   }
 
   .getInvolved {
-    .getInvolved-text {
-      h2 {
-        font-size: 2em;
-      }
-    }
     img {
       width: 35%;
     }
@@ -340,9 +349,8 @@ footer {
     width: 90%;
   }
 }
-  
-@media screen and (max-width: 500px) {
 
+@media screen and (max-width: 500px) {
   .navbar {
     .container {
       flex-direction: row;
@@ -353,7 +361,8 @@ footer {
     }
   }
 
-  .container, .smaller-container {
+  .container,
+  .smaller-container {
     flex-direction: column-reverse;
   }
 
@@ -366,7 +375,6 @@ footer {
       width: 90%;
     }
   }
-
 
   .getInvolved {
     .getInvolved-text {
@@ -388,5 +396,4 @@ footer {
       }
     }
   }
-  
 }
