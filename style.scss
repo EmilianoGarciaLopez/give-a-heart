@@ -333,6 +333,10 @@ footer {
     }
   }
 
+  .gridContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .buttons {
     font-size: 0.85rem;
     .button-filled {
@@ -397,4 +401,10 @@ footer {
       }
     }
   }
+
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+  }
+
 }
