@@ -18,7 +18,7 @@ function urlFor(source) {
 client.fetch(query).then((heart) => {
     heart.forEach((heart) => {
       let imageNode = document.createElement('img');
-      imageNode.src = urlFor(heart.image).width(500).height(500).url();
+      imageNode.src = urlFor(heart.image).width(400).height(400).url();
       gridElement.appendChild(imageNode)
     })
   })

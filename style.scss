@@ -256,13 +256,15 @@ h2 {
 }
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.5em;
+  margin-top: 2em;
 
   img {
     width: 100%;
     height: auto;
     border-radius: 0.5em;
+    box-shadow: 4px 4px 6px $darkgrey;
   }
 }
 
