@@ -9,5 +9,9 @@
   "devDependencies": {
     "sass": "^1.43.4",
     "vite": "^2.6.14"
+  },
+  "dependencies": {
+    "@sanity/client": "^2.21.10",
+    "@sanity/image-url": "^1.0.1"
   }
 }
