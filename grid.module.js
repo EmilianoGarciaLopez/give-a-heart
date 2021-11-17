@@ -7,6 +7,8 @@ const query = `*[_type == "Hearts"] {
   bio,
 }`;
 
+const gridElement = document.getElementById('gridContainer');
+
 const builder = imageUrlBuilder(client)
 
 function urlFor(source) {
@@ -15,6 +17,8 @@ function urlFor(source) {
 
 client.fetch(query).then((heart) => {
     heart.forEach((heart) => {
-      console.log(`author:${heart.name} \n bio:${heart.bio} \n image:${urlFor(heart.image).url()}`)
+      let imageNode = document.createElement('img');
+      imageNode.src = urlFor(heart.image).width(500).height(500).url();
+      gridElement.appendChild(imageNode)
     })
   })

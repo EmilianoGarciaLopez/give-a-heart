@@ -134,7 +134,7 @@ section {
       color: $black;
       display: block;
       .pinkText {
-        color: $orange;
+        color: $pink;
         display: inline-block;
       }
     }
@@ -274,6 +274,13 @@ footer {
         color: $darkergrey;
       }
     }
+  }
+}
+
+.gridContainer {
+  img {
+    width: 200px;
+    height: 100%;
   }
 }
 
