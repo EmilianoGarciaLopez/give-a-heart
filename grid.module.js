@@ -30,9 +30,9 @@ client.fetch(query).then((heart) => {
       const textNode = document.createElement("div");
       textNode.classList.add("popup-text");
       const nameNode = document.createElement("h2");
-      nameNode.innerHTML = item.name;
+      nameNode.innerHTML = (item.name || "");
       const bioNode = document.createElement("p");
-      bioNode.innerHTML = item.bio;
+      bioNode.innerHTML = (item.bio || "");
       const popupImage = document.createElement("img");
       popupImage.src = urlFor(item.image).width(500).height(500).url();
       const exitNode = document.createElement("img");
