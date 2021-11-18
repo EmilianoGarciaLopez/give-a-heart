@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.0.2",
     "prettier": "2.4.1",
@@ -17,7 +18,8 @@
   },
   "dependencies": {
     "@sanity/client": "^2.21.10",
-    "@sanity/image-url": "^1.0.1"
+    "@sanity/image-url": "^1.0.1",
+    "eslint-config-prettier": "^8.3.0"
   },
   "lint-staged": {
     "*.{js,scss}": "eslint --cache --fix",

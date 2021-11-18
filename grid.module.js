@@ -1,5 +1,6 @@
-import client from "./sanity-client.js";
 import imageUrlBuilder from "@sanity/image-url";
+import client from "./sanity-client";
+
 
 const query = `*[_type == "Hearts"] {
   name,
@@ -11,27 +12,43 @@ const gridElement = document.getElementById("gridContainer");
 
 const builder = imageUrlBuilder(client);
 
+
 function urlFor(source) {
   return builder.image(source);
 }
 
 client.fetch(query).then((heart) => {
-  heart.forEach((heart) => {
-    let imageNode = document.createElement("img");
-    imageNode.src = urlFor(heart.image).width(300).height(300).url();
+  heart.forEach((item) => {
+    const imageNode = document.createElement("img");
+    imageNode.src = urlFor(item.image).width(300).height(300).url();
     gridElement.appendChild(imageNode);
 
     imageNode.addEventListener("click", () => {
-      let popupNode = document.createElement("div");
-      popupNode.classList.add("popup");
-      let nameNode = document.createElement("h2");
-      nameNode.innerHTML = heart.name;
-      let bioNode = document.createElement("p");
-      bioNode.innerHTML = heart.bio;
-      let popupImage = document.createElement("img");
-      popupImage.src = urlFor(heart.image).width(500).height(500).url();
-      document.body.appendChild(popupNode);
-      popupNode.appendChild(popupImage, nameNode, bioNode);
+      const popupNode = document.createElement("div");
+      popupNode.classList.add("popup-content");
+      const textNode = document.createElement("div");
+      textNode.classList.add("popup-text");
+      const nameNode = document.createElement("h2");
+      nameNode.innerHTML = item.name;
+      const bioNode = document.createElement("p");
+      bioNode.innerHTML = item.bio;
+      const popupImage = document.createElement("img");
+      popupImage.src = urlFor(item.image).width(500).height(500).url();
+      const exitNode = document.createElement("img");
+      exitNode.src = "./images/close.svg";
+      exitNode.classList.add("exit");
+      popupNode.appendChild(popupImage);
+      textNode.appendChild(nameNode);
+      textNode.appendChild(bioNode);
+      popupNode.appendChild(textNode);
+      popupNode.appendChild(exitNode);
+      document.getElementById("popupContainer").appendChild(popupNode);
+      document.getElementById("popupContainer").style.display = "flex";
+
+      exitNode.addEventListener("click", () => {
+        document.getElementById("popupContainer").removeChild(popupNode);
+        document.getElementById("popupContainer").style.display = "none";
+      });
     });
   });
 });

@@ -297,16 +297,51 @@ footer {
   }
 }
 
-.popup {
+.popup-container {
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  background-color: $black;
   justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
   display: none;
+
+  .popup-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    
+    .exit {
+      justify-self: flex-start;
+      align-self: flex-start;
+      width: 2em;
+    }
+
+    img {
+      width: 50%;
+      border-radius: 0.5em;
+    }
+
+    .popup-text {
+      margin-left: auto;
+      width: 40%;
+
+      h2 {
+        color: $orange;
+        font-size: 2.5em;
+      }
+
+      p {
+        color: white;
+      }
+    }
+
+  }
 }
 
 // media queries
