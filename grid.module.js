@@ -20,5 +20,12 @@ client.fetch(query).then((heart) => {
     let imageNode = document.createElement("img");
     imageNode.src = urlFor(heart.image).width(400).height(400).url();
     gridElement.appendChild(imageNode);
+
+    imageNode.addEventListener("click", () => {
+      let textNode = document.createElement("p");
+      textNode.innerHTML = heart.name;
+      console.log(textNode);
+    })
+
   });
 });
