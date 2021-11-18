@@ -44,10 +44,12 @@ client.fetch(query).then((heart) => {
       popupNode.appendChild(exitNode);
       document.getElementById("popupContainer").appendChild(popupNode);
       document.getElementById("popupContainer").style.display = "flex";
+      document.body.style.overflowY = "hidden";
 
       exitNode.addEventListener("click", () => {
         document.getElementById("popupContainer").removeChild(popupNode);
         document.getElementById("popupContainer").style.display = "none";
+        document.body.style.overflowY = "scroll";
       });
     });
   });
