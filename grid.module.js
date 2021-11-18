@@ -3,7 +3,7 @@ import client from "./sanity-client";
 import closeImage from "./images/close.svg";
 
 
-const query = `*[_type == "Hearts"] {
+const query = `*[_type == "Hearts"] | order(_createdAt desc) {
   name,
   image,
   bio,
