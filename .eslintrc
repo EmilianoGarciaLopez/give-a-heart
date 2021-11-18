@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier" // Make sure this is the last
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+}
+}
