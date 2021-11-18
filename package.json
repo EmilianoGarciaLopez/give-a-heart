@@ -5,22 +5,22 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "eslint",
-    "lint:fix": "npm run lint --fix",
-    "prettier": "npx prettier . --check",
-    "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run prettier:fix && npm run lint:fix",
     "prepare": "husky install"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.0.2",
     "prettier": "2.4.1",
     "sass": "^1.43.4",
-    "vite": "^2.6.14",
-    "husky": "^7.0.0"
+    "vite": "^2.6.14"
   },
   "dependencies": {
     "@sanity/client": "^2.21.10",
     "@sanity/image-url": "^1.0.1"
+  },
+  "lint-staged": {
+    "*.{js,scss}": "eslint --cache --fix",
+    "*.{js,scss,md,html}": "prettier --write"
   }
 }

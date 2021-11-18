@@ -18,13 +18,20 @@ function urlFor(source) {
 client.fetch(query).then((heart) => {
   heart.forEach((heart) => {
     let imageNode = document.createElement("img");
-    imageNode.src = urlFor(heart.image).width(400).height(400).url();
+    imageNode.src = urlFor(heart.image).width(300).height(300).url();
     gridElement.appendChild(imageNode);
 
     imageNode.addEventListener("click", () => {
-      let textNode = document.createElement("p");
-      textNode.innerHTML = heart.name;
-      console.log(textNode);
+      let popupNode = document.createElement("div");
+      popupNode.classList.add("popup");
+      let nameNode = document.createElement("h2");
+      nameNode.innerHTML = heart.name;
+      let bioNode = document.createElement("p");
+      bioNode.innerHTML = heart.bio;
+      let popupImage = document.createElement("img");
+      popupImage.src = urlFor(heart.image).width(500).height(500).url();
+      document.body.appendChild(popupNode);
+      popupNode.appendChild(popupImage, nameNode, bioNode);
     });
   });
 });
