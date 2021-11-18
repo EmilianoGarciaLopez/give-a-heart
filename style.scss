@@ -306,7 +306,6 @@ footer {
   background-color: $black;
   justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
   display: none;
 
   .popup-content {
@@ -394,6 +393,30 @@ footer {
     }
   }
 
+  .popup-container {
+  .popup-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    .exit {
+      align-self: flex-end;
+      order: 1;
+    }
+
+    img {
+      order: 2;
+      width: 70%;
+    }
+
+    .popup-text {
+      margin: 2em 0 0 0;
+      order: 3;
+      width: 80%;
+    }
+  }
+}
+
   .container {
     width: 90%;
   }
@@ -445,6 +468,21 @@ footer {
       width: 80%;
       img {
         width: 50%;
+      }
+    }
+  }
+  .popup-container {
+    .popup-content {
+      img {
+        width: 85%;
+      }
+  
+      .popup-text {
+        width: 85%;
+      }
+
+      .exit {
+        margin-bottom: 2em;
       }
     }
   }
