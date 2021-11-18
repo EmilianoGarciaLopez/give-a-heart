@@ -37,11 +37,9 @@ client.fetch(query).then((heart) => {
       const exitNode = document.createElement("img");
       exitNode.src = "./images/close.svg";
       exitNode.classList.add("exit");
-      popupNode.appendChild(popupImage);
-      textNode.appendChild(nameNode);
-      textNode.appendChild(bioNode);
-      popupNode.appendChild(textNode);
-      popupNode.appendChild(exitNode);
+      popupNode.append(popupImage);
+      textNode.append(nameNode, bioNode);
+      popupNode.append(textNode, exitNode);
       document.getElementById("popupContainer").appendChild(popupNode);
       document.getElementById("popupContainer").style.display = "flex";
       document.body.style.overflowY = "hidden";
