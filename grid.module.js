@@ -1,6 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import client from "./sanity-client";
-import close from "./images/close.svg";
+import closeImage from "./images/close.svg";
 
 
 const query = `*[_type == "Hearts"] {
@@ -36,7 +36,7 @@ client.fetch(query).then((heart) => {
       const popupImage = document.createElement("img");
       popupImage.src = urlFor(item.image).width(500).height(500).url();
       const exitNode = document.createElement("img");
-      exitNode.src = close;
+      exitNode.src = closeImage;
       exitNode.classList.add("exit");
       popupNode.append(popupImage);
       textNode.append(nameNode, bioNode);
