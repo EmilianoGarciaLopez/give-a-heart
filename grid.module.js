@@ -35,7 +35,7 @@ client.fetch(query).then((heart) => {
       const popupImage = document.createElement("img");
       popupImage.src = urlFor(item.image).width(500).height(500).url();
       const exitNode = document.createElement("img");
-      exitNode.src = "./images/close.svg";
+      exitNode.src = "./images/Close.svg";
       exitNode.classList.add("exit");
       popupNode.append(popupImage);
       textNode.append(nameNode, bioNode);
