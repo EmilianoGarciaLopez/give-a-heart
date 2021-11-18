@@ -25,7 +25,6 @@ client.fetch(query).then((heart) => {
       let textNode = document.createElement("p");
       textNode.innerHTML = heart.name;
       console.log(textNode);
-    })
-
+    });
   });
 });
