@@ -265,6 +265,11 @@ h2 {
     height: auto;
     border-radius: 0.5em;
     box-shadow: 4px 4px 6px $darkergrey;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-0.15em);
+    }
   }
 }
 
@@ -319,6 +324,7 @@ footer {
       justify-self: flex-start;
       align-self: flex-start;
       width: 2em;
+      cursor: pointer;
     }
 
     img {
