@@ -273,6 +273,20 @@ h2 {
   }
 }
 
+.counter {
+  background-color: $grey;
+
+  .smaller-container {
+    justify-content: center;
+  }
+  h3 {
+    color: $orange;
+    margin-top: 2em;
+    font-size: 1.5em;
+  }
+}
+
+
 footer {
   display: flex;
   justify-content: center;

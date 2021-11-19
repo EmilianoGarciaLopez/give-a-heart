@@ -18,11 +18,14 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-client.fetch(query).then((heart) => {
+var count = 0;
+
+await client.fetch(query).then((heart) => {
   heart.forEach((item) => {
     const imageNode = document.createElement("img");
     imageNode.src = urlFor(item.image).width(300).height(300).url();
     gridElement.appendChild(imageNode);
+    count++;
 
     imageNode.addEventListener("click", () => {
       const popupNode = document.createElement("div");
@@ -53,3 +56,7 @@ client.fetch(query).then((heart) => {
     });
   });
 });
+
+
+document.getElementById("counter-id").innerHTML = `${count} heart arts submitted — ${count*100} dollars raised`;
+
