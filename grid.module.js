@@ -58,5 +58,5 @@ await client.fetch(query).then((heart) => {
 });
 
 
-document.getElementById("counter-id").innerHTML = `${count} heart arts submitted — ${count*100} dollars raised`;
+document.getElementById("counter-id").innerHTML = `${100-count} heart arts remaining — ${Intl.NumberFormat().format(10000 - count*100)} dollars left`;
 
