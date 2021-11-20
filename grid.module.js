@@ -24,7 +24,7 @@ async function main() { await client.fetch(query).then((heart) => {
   heart.forEach((item) => {
     const imageNode = document.createElement("img");
     imageNode.src = urlFor(item.image).width(300).height(300).url();
-    imageNode.alt = item.name;
+    imageNode.alt = `heart image by ${item.name}`;
     gridElement.appendChild(imageNode);
     count++;
 
@@ -39,7 +39,7 @@ async function main() { await client.fetch(query).then((heart) => {
       bioNode.innerHTML = (item.bio || "");
       const popupImage = document.createElement("img");
       popupImage.src = urlFor(item.image).width(500).height(500).url();
-      popupImage.alt = item.name;
+      popupImage.alt = `heart image by ${item.name}`;
       const exitNode = document.createElement("img");
       exitNode.src = closeImage;
       exitNode.classList.add("exit");
