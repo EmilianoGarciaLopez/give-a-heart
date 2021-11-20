@@ -20,7 +20,7 @@ function urlFor(source) {
 
 var count = 0;
 
-await client.fetch(query).then((heart) => {
+async function main() { await client.fetch(query).then((heart) => {
   heart.forEach((item) => {
     const imageNode = document.createElement("img");
     imageNode.src = urlFor(item.image).width(300).height(300).url();
@@ -56,7 +56,9 @@ await client.fetch(query).then((heart) => {
     });
   });
 });
-
-
 document.getElementById("counter-id").innerHTML = `${100-count} heart arts remaining — ${Intl.NumberFormat().format(10000 - count*100)} dollars left`;
+}
+
+main();
+
 
