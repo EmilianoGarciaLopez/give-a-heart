@@ -56,7 +56,7 @@ async function main() { await client.fetch(query).then((heart) => {
     });
   });
 });
-document.getElementById("counter-id").innerHTML = `${100-count} heart arts remaining — ${Intl.NumberFormat().format(10000 - count*100)} dollars left`;
+document.getElementById("counter-id").innerHTML = `${100-count} heart arts remaining — ${Intl.NumberFormat().format(10000 - count*100)} dollars left to raise`;
 }
 
 main();
