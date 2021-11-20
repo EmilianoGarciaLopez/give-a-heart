@@ -18,7 +18,7 @@ function urlFor(source) {
   return builder.image(source);
 }
 
-var count = 0;
+let count = 0;
 
 async function main() { await client.fetch(query).then((heart) => {
   heart.forEach((item) => {
@@ -56,9 +56,10 @@ async function main() { await client.fetch(query).then((heart) => {
     });
   });
 });
-document.getElementById("counter-id").innerHTML = `${100-count} heart arts remaining — ${Intl.NumberFormat().format(10000 - count*100)} dollars left to raise`;
 }
 
-main();
+main().then(() => {
+  document.getElementById("counter-id").innerHTML = `${100-count} heart arts remaining — ${Intl.NumberFormat().format(10000 - count*100)} dollars left to raise`;
+});
 
 
