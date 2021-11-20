@@ -286,7 +286,6 @@ h2 {
   }
 }
 
-
 footer {
   display: flex;
   justify-content: center;
@@ -333,7 +332,7 @@ footer {
     align-items: center;
     max-width: 1200px;
     width: 90%;
-    
+
     .exit {
       justify-self: flex-start;
       align-self: flex-start;
@@ -359,7 +358,6 @@ footer {
         color: white;
       }
     }
-
   }
 }
 
@@ -414,28 +412,28 @@ footer {
   }
 
   .popup-container {
-  .popup-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+    .popup-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
 
-    .exit {
-      align-self: flex-end;
-      order: 1;
-    }
+      .exit {
+        align-self: flex-end;
+        order: 1;
+      }
 
-    img {
-      order: 2;
-      width: 70%;
-    }
+      img {
+        order: 2;
+        width: 70%;
+      }
 
-    .popup-text {
-      margin: 2em 0 0 0;
-      order: 3;
-      width: 80%;
+      .popup-text {
+        margin: 2em 0 0 0;
+        order: 3;
+        width: 80%;
+      }
     }
   }
-}
 
   .container {
     width: 90%;
@@ -496,7 +494,7 @@ footer {
       img {
         width: 85%;
       }
-  
+
       .popup-text {
         width: 85%;
       }
