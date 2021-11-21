@@ -137,6 +137,11 @@ section {
       }
     }
 
+    h3 {
+      color: $black;
+      font-size: 1.5em;
+    }
+
     .subtitle {
       font-size: 1.25em;
       color: $black;
@@ -168,6 +173,7 @@ h2 {
   font-weight: 700;
   color: $black;
   display: block;
+  margin-bottom: 0.125rem;
 }
 
 .getInvolved {
@@ -176,6 +182,23 @@ h2 {
     width: 50%;
     max-width: 500px;
     margin: 2em 4em 2em 0;
+
+    .list {
+      margin-top: 0.5em;
+      ol {
+        margin-left: 2em;
+        li {
+          margin-bottom: 0.25em;
+          &::marker {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    margin-top: 0.125rem;
   }
   img {
     width: 50%;
@@ -371,6 +394,10 @@ footer {
     .hero-text {
       h1 {
         font-size: 3em;
+      }
+
+      h3 {
+        font-size: 1.25em;
       }
       .subtitle {
         font-size: 1em;

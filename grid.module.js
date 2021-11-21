@@ -2,7 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import client from "./sanity-client";
 import closeImage from "./images/close.svg";
 
-const query = `*[_type == "Hearts"] | order(_createdAt desc) {
+const query = `*[_type == "Hearts"] | order(_createdAt asc) {
   name,
   image,
   bio,
@@ -62,7 +62,5 @@ async function main() {
 main().then(() => {
   document.getElementById("counter-id").innerHTML = `${
     100 - count
-  } heart arts remaining — ${Intl.NumberFormat().format(
-    10000 - count * 100
-  )} dollars left to raise`;
+  } heart arts remaining`;
 });
