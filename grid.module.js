@@ -60,7 +60,5 @@ async function main() {
 }
 
 main().then(() => {
-  document.getElementById("counter-id").innerHTML = `${
-    100 - count
-  } heart arts remaining`;
+  document.getElementById("counter-id").innerHTML = `All Sold Out`;
 });
